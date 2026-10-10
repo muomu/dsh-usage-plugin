@@ -1,0 +1,12 @@
+# dsh-usage-tokens —— DSH bundle patch
+#
+# 挂载声明：DSH 启动时把这一行插入 profile 的配置树。
+# 安装：
+#   dsh plugin --profile web add link:/path/to/dsh-usage-plugin
+#
+# Host 半（lib/index.js）注册账本、回填与 HTTP 路由；
+# Client 半（lib/client.js）通过 package.json 的 dsh.client 被发现，
+# 在 sidebar.footer.action 插槽注册按钮。
+- insert:
+    - id: dsh-usage-tokens
+      name: dsh-usage-tokens
